@@ -13,7 +13,6 @@ def index():
     return render_template('index.html')
 
 @app.route('/webhook', methods=['POST'])
-
 def webhook():
     data = request.get_json(silent=True)
     if data['queryResult']['queryText'] == 'yes':
